@@ -12,6 +12,23 @@
         <link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
     </head>
   <body>
+
+     <!--VIDEO-->
+     <div id="splash-screen">
+      <!-- Video Desktop -->
+      <video autoplay muted playsinline class="splash-video desktop-video">
+          <source src="./videos/introDesktop.mp4" type="video/mp4">
+          Il tuo browser non supporta il tag video.
+      </video>
+  
+      <!-- Video Mobile -->
+      <video autoplay muted playsinline class="splash-video mobile-video">
+          <source src="./videos/videoMobile.mp4" type="video/mp4">
+          Il tuo browser non supporta il tag video.
+      </video>
+  </div>
+
+
     <nav class="navbar navbar-expand-lg fixed-top custom-navbar"> <!--navbar-->
         <div class="container-fluid">
           <!-- Brand -->
@@ -59,7 +76,7 @@
           <div class="row align-items-center">
             <div class="col-md-6">
               <h1 class="borel-text display-4 mb-4">About Us</h1>
-              <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolore reiciendis eius provident soluta facilis numquam commodi odit tempore, exercitationem quos nulla, dolor vero nesciunt assumenda perspiciatis vitae nisi pariatur?</p>
+              <p class="lead">Solo due ragazze con un uncinetto e una matassa di idee da districare una maglia alla volta</p>
             </div>
           </div>
         </div>
@@ -207,5 +224,18 @@
     <br>
   </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script>
+      // Gestisci entrambi i video
+document.querySelectorAll('.splash-video').forEach(video => {
+    video.addEventListener('ended', function() {
+        const splashScreen = document.getElementById('splash-screen');
+        splashScreen.classList.add('fade-out');
+        
+        setTimeout(() => {
+            splashScreen.remove();
+        }, 500);
+    });
+});
+    </script>
   </body>
 </html>
