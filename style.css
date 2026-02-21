@@ -4,7 +4,7 @@ body {
 
 .hero {
     height: 60vh;
-    background: linear-gradient(to bottom, #6356b3, #e6f3f0);
+    background: linear-gradient(to bottom, #6356b3, #f8f2e7);
   }
 
 /*FONT*/
@@ -33,7 +33,7 @@ body {
 
 /*NAVBAR*/
 .custom-navbar {
-    background-color: #e6f3f0;
+    background-color: #f8f2e7;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
 
@@ -67,7 +67,7 @@ body {
     font-size: 1.5rem;
   }
   .bg-cream {
-    background-color: #e6f3f0; /* Crema */
+    background-color: #f8f2e7; /* Crema */
   }
   .bg-lilla {
     background-color: #6a5acd; /* Lilla */
